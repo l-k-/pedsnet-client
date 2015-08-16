@@ -1,0 +1,282 @@
+html,
+body {
+    background-color: #eee;
+    color: #555;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+content {
+    display: table-row;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    font-weight: 400;
+    font-size: 14px;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding-top: 5px;
+    vertical-align: middle;
+}
+
+.menu-title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.header a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: underline;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul,
+.header ul li {
+    display: inline-block;
+}
+
+.header ul li a {
+    padding: 10px 20px;
+}
+
+.header ul li a:link,
+.header ul li a:visited,
+.header ul li a:hover,
+.header ul li a:active,
+.header ul li a.selected {
+    text-decoration: none;
+}
+
+.header ul li a:link,
+.header ul li a:visited,
+.header ul li a:active,
+.header ul li a.selected,
+.header a:link,
+.header a:visited {
+    color: #555;
+}
+
+.header ul li a:hover,
+.header a:hover {
+    color: #337ab7;
+}
+
+.header ul li a:active,
+.header ul li a.selected {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 9px 19px;
+}
+
+.fa-external-link {
+    margin-right: 3px;
+}
+
+.fa-database {
+    margin-right: 5px;
+}
+
+sidebar,
+main {
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px;
+}
+
+main {
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+sidebar {
+    float: left;
+    margin: 10px;
+    margin-top: 0;
+}
+
+sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label:before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-weight: 400;
+}
+
+sidebar input[type=checkbox] + label:before {
+    /* fa-square-o */
+    content: "\f096";
+    letter-spacing: 5px;
+}
+
+main input[type=checkbox] + label:before {
+    /* fa-plus-square-o */
+    content: "\f196";
+    letter-spacing: 3px;
+}
+
+sidebar input[type=checkbox]:checked + label:before {
+    /* fa-check-square-o */
+    content: "\f046";
+    letter-spacing: 3px;
+}
+
+main input[type=checkbox]:checked + label:before {
+    /* fa-minus-square-o */
+    content: "\f147";
+    letter-spacing: 3px;
+}
+
+checkbox label {
+    padding-left: 0;
+}
+
+input[type=checkbox] ~ ul {
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding: 0;
+}
+
+sidebar input[type=checkbox]:checked ~ ul {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 1;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+main input[type=checkbox]:checked ~ ul {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 1;
+    padding: 10px;
+    padding-top: 0;
+}
+
+label {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.table-panel {
+    float: left;
+    width: 20%;
+    min-width: 150px;
+    height: 100%;
+    padding: 10px;
+}
+
+.table-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table-panel ul li a {
+    margin: 2px;
+    padding: 2px;
+}
+
+.table-panel ul li a:link,
+.table-panel ul li a:visited,
+.table-panel ul li a:hover,
+.table-panel ul li a:active,
+.table-panel ul li a.selected {
+    text-decoration: none;
+}
+
+.table-panel ul li a:link,
+.table-panel ul li a:visited,
+.table-panel ul li a:active,
+.table-panel ul li a.selected,
+.table-panel a:link,
+.table-panel a:visited {
+    color: #555;
+}
+
+.table-panel ul li a:hover,
+.table-panel a:hover {
+    color: #337ab7;
+}
+
+.table-panel ul li a:active,
+.table-panel ul li a.selected {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    margin: 1px;
+}
+
+.data-panel {
+    float: left;
+    width: 29.5%;
+    min-width: 200px;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff;
+}
+
+left-data,
+right {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+data-header-l ul li a,
+data-header-r ul li a {
+    padding: 5px 10px !important;
+}
+
+data-header-l ul li a:active,
+data-header-l ul li a.selected,
+data-header-r ul li a:active,
+data-header-r ul li a.selected {
+    padding: 4px 9px !important;
+}

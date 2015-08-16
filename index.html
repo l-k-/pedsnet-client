@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width'>
+    <title>Data Models</title>
+    <link rel=stylesheet href='/css/bootstrap.css'>
+    <link rel=stylesheet href='/css/font-awesome.css'>
+    <link rel=stylesheet href='/css/data-models.css'>
+</head>
+
+<body>
+    <wrapper id=wrapper>
+        <header class=header id=header>
+            <p class=menu-title>Data Models</p>
+            <ul>
+                <li><a class=selected href='#'><i class='fa fa-database'></i><span>PEDSnet</span></a></li>
+                <li><a href='#'><i class='fa fa-database'></i><span>PCORnet</span></a></li>
+                <li><a href='#'><i class='fa fa-database'></i><span>OMOP</span></a></li>
+            </ul>
+            <a href='http://pedsnet.info'><i class='fa fa-external-link'></i><span class='hidden-xs'>Pediatric Learning Health System</span></a>
+        </header>
+        <content id=content>
+            <sidebar id=sidebar>
+                <ul>
+                    <li>
+                        <input type=checkbox id=v1 name=version value=v1 checked>
+                        <label for=v1>Version 1.0.0</label>
+                        <ul>
+                            <li>
+                                <label>Release:</label> beta+1</li>
+                            <li>
+                                <label>Date:</label> 01/01/01</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type=checkbox id=v190 name=version value=v190>
+                        <label for=v190>Version 1.9.0</label>
+                        <ul>
+                            <li>
+                                <label>Release:</label> beta+1</li>
+                            <li>
+                                <label>Date:</label> 01/01/10</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type=checkbox id=v195 name=version value=v195>
+                        <label for=v195>Version 1.9.5</label>
+                        <ul>
+                            <li>
+                                <label>Release:</label> beta+1</li>
+                            <li>
+                                <label>Date:</label> 01/01/10</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type=checkbox id=v2 name=version value=v2 checked>
+                        <label for=v2>Version 2.0.0</label>
+                        <ul>
+                            <li>
+                                <label>Release:</label> beta+2</li>
+                            <li>
+                                <label>Date:</label> 01/01/15</li>
+                        </ul>
+                    </li>
+                </ul>
+            </sidebar>
+            <main>
+                <left class=table-panel id=left>
+                    <h2>Version 1.0.0</h2>
+                    <ul>
+                        <li>
+                            <input type=checkbox id=t11 name=table value=t11 checked>
+                            <label for=t11>care_site</label>
+                            <ul>
+                                <li><a href='#'><span>care_site_id</span></a></li>
+                                <li><a class=selected href='#'><span>care_site_source_value</span></a></li>
+                                <li><a href='#'><span>location_id</span></a></li>
+                                <li><a href='#'><span>organization_id</span></a></li>
+                                <li><a href='#'><span>place_of_service_concept_id</span></a></li>
+                                <li><a href='#'><span>place_of_service_source_value</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type=checkbox id=t12 name=table value=t12>
+                            <label for=t12>concept</label>
+                            <ul>
+                                <li><a href='#'><span>concept_class</span></a></li>
+                                <li><a href='#'><span>concept_code</span></a></li>
+                                <li><a href='#'><span>concept_id</span></a></li>
+                                <li><a href='#'><span>concept_level</span></a></li>
+                                <li><a href='#'><span>concept_name</span></a></li>
+                                <li><a href='#'><span>invalid_reason</span></a></li>
+                                <li><a href='#'><span>valid_end_date</span></a></li>
+                                <li><a href='#'><span>invalid_reason</span></a></li>
+                                <li><a href='#'><span>valid_start_date</span></a></li>
+                                <li><a href='#'><span>vocabulary_id</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </left>
+                <left-data class=data-panel id=left-data>
+                    <data-header-l class=header id=data-header-l>
+                        <ul>
+                            <li><a class=selected href='#'>ETL</span></a></li>
+                            <li><a href='#'><span>DDL</span></a></li>
+                        </ul>
+                    </data-header-l>
+                    <data-content-l id=data-content-l>
+                        <p>If care site source values are deemed sensitive by your organization, insert a pseudo-identifier (random number, encrypted identifier) into the field. Sites electing to obfuscate care site_source_values will keep the mapping between the value in this field and the original clear text location source value. This value is only used for site-level re-identification for study recruitment and for data quality review. For EPIC EHRs, map care_site_id to Clarity Department. Sites may consider using the care_site_id field value in this table as the pseudo-identifier as long as a local mapping from care_site_id to the real site identifier is maintained.</p>
+                    </data-content-l>
+                </left-data>
+                <right class=table-panel id=right>
+                    <h2>Version 2.0.0</h2>
+                    <ul>
+                        <li>
+                            <input type=checkbox id=t21 name=table value=t21 checked>
+                            <label for=t21>care_site</label>
+                            <ul>
+                                <li><a href='#'><span>care_site_id</span></a></li>
+                                <li><a class=selected href='#'><span>care_site_source_value</span></a></li>
+                                <li><a href='#'><span>location_id</span></a></li>
+                                <li><a href='#'><span>organization_id</span></a></li>
+                                <li><a href='#'><span>place_of_service_concept_id</span></a></li>
+                                <li><a href='#'><span>place_of_service_source_value</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type=checkbox id=t22 name=table value=t22>
+                            <label for=t22>concept</label>
+                            <ul>
+                                <li><a href='#'><span>concept_class</span></a></li>
+                                <li><a href='#'><span>concept_code</span></a></li>
+                                <li><a href='#'><span>concept_id</span></a></li>
+                                <li><a href='#'><span>concept_level</span></a></li>
+                                <li><a href='#'><span>concept_name</span></a></li>
+                                <li><a href='#'><span>invalid_reason</span></a></li>
+                                <li><a href='#'><span>valid_end_date</span></a></li>
+                                <li><a href='#'><span>invalid_reason</span></a></li>
+                                <li><a href='#'><span>valid_start_date</span></a></li>
+                                <li><a href='#'><span>vocabulary_id</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </right>
+                <right-data class=data-panel id=right-data>
+                    <data-header-r class=header id=data-header-r>
+                        <ul>
+                            <li><a class=selected href='#'>ETL</span></a></li>
+                            <li><a href='#'><span>DDL</span></a></li>
+                        </ul>
+                    </data-header-r>
+                    <data-content-r id=data-content-r>
+                        <p>A quick brown fox jumps over the lazy dog.</p>
+                    </data-content-r>
+                </right-data>
+            </main>
+        </content>
+    </wrapper>
+</body>
+
+</html>
